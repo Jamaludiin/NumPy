@@ -136,3 +136,14 @@ for i in var_array:
 # indexing 2-D Arrays
 var_array_2d = np.array([[1,2,3,4,5], [6,7,8,9,10]])
 print('\n2nd element on 1st row: ', var_array_2d[0, 1])
+
+print('5th element on 2nd row: ', var_array_2d[1, 4])
+
+
+#----------------------------
+# indexing five dimentional arrays
+var_array_5d = np.array([[[[[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]]]]], ndmin=5)
+
+#print('2th element on 2nd row: ', var_array_5d[0, 0, 0, 1, 0, 1]) # error 
+
+print('\n2nd element on 2nd row: ', var_array_5d[0, 0, 0, 1, 0])
