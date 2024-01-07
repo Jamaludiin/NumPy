@@ -146,4 +146,10 @@ var_array_5d = np.array([[[[[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3
 
 #print('2th element on 2nd row: ', var_array_5d[0, 0, 0, 1, 0, 1]) # error 
 
-print('\n2nd element on 2nd row: ', var_array_5d[0, 0, 0, 1, 0])
+print('\n1nd element on 1nd row: ', var_array_5d[0, 0, 0, 1, 0])
+
+var_array_5d = np.array([[[[[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15]]]]], ndmin=5)
+print(var_array_5d)
+print('\n1nd element on 4nd row: ', var_array_5d[0, 0, 0, 3, 0])
+print('\n2nd element on 2nd row: ', var_array_5d[0, 0, 0, 1, 1])
+
