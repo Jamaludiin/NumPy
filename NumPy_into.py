@@ -141,6 +141,14 @@ print('5th element on 2nd row: ', var_array_2d[1, 4])
 
 
 #----------------------------
+# indexing three dimentional arrays
+# Access the third element of the second array of the first array
+var_array_3d = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
+
+print("\nAccess the third element of the second array of the first array",var_array_3d[0, 1, 2])
+
+
+#----------------------------
 # indexing five dimentional arrays
 var_array_5d = np.array([[[[[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]]]]], ndmin=5)
 
@@ -153,3 +161,9 @@ print(var_array_5d)
 print('\n1nd element on 4nd row: ', var_array_5d[0, 0, 0, 3, 0])
 print('\n2nd element on 2nd row: ', var_array_5d[0, 0, 0, 1, 1])
 
+
+#----------------------------
+#Negative Indexing
+var_array_2d = np.array([[1,2,3,4,5], [6,7,8,9,10]])
+
+print('Ngative indexing Last element from 2nd dim: ', var_array_2d[1, -1])
