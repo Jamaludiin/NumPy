@@ -160,6 +160,19 @@ var_array_5d = np.array([[[[[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 
 print(var_array_5d)
 print('\n1nd element on 4nd row: ', var_array_5d[0, 0, 0, 3, 0])
 print('\n2nd element on 2nd row: ', var_array_5d[0, 0, 0, 1, 1])
+print('\n1st element on 1st row: ', var_array_5d[0, 0, 0, 0, 0])
+
+# note only use the last two digits, the second last is the array number and the last is the value index
+
+print('\n3st element on 3st row: ', var_array_5d[0, 0, 0, 2, 2])
+print('\n3st element on 4st row: ', var_array_5d[0, 0, 0, 3, 2])
+ 
+print('\n2nd element on 1st row: ', var_array_5d[0, 0, 0, 0, 1])
+print('\n3nd element on 1st row: ', var_array_5d[0, 0, 0, 0, 2])
+
+
+
+
 
 
 #----------------------------
@@ -167,3 +180,4 @@ print('\n2nd element on 2nd row: ', var_array_5d[0, 0, 0, 1, 1])
 var_array_2d = np.array([[1,2,3,4,5], [6,7,8,9,10]])
 
 print('Ngative indexing Last element from 2nd dim: ', var_array_2d[1, -1])
+print('Ngative indexing Last element from 1st dim: ', var_array_2d[0, -1])
