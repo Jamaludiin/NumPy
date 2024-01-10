@@ -69,3 +69,6 @@ print("\nSlicing 2D arrays",var_array_2[0:2, 0:3]) # the second 0:3 targets the 
 #-------------------------------------------
 print("\nSlicing 2D arrays: row 2 or dimention 2 and their last elements",var_array_2[1, -1:]) # row 2 or dimention 2 and their elements ranging from 1 to 3
 print("Slicing 2D arrays return all emelents in second dimention except the last",var_array_2[1, :-1])# return all emelents in second dimention except the last
+
+# USE THESE CONCEPTS FOR THE REST OF THE TYPES OF DIMENTIONS
+# some ideas are got from www.learnpythoneasily.com
