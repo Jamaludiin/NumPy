@@ -108,3 +108,108 @@ print(len(var_array_3))
 print(range(len(var_array_3)))
 print(var_array_3.ndim)
 
+
+
+
+#-------------------------------
+# --------------------------------------------------------------------------------------
+# To return the actual values, the scalars, we have to iterate the arrays in each dimension.
+
+var_array_4 = np.array([[[1,2,3,4],[6,7,8,9]],[[10,11,12,13],[22,33,4,55]]]) # still 3D
+
+print("\nreturn the actual values for 3D arrays looping")
+
+for i in var_array_4:
+    print(i)
+    for k in i:
+        print(k)
+        for j in k:
+            print(j)
+            print("----------------")
+
+# -------------------- or this way 
+print("\nreturn the actual values for 3D arrays looping")
+
+for i in var_array_4:
+    for k in i:
+        for j in k:
+            print(j)
+
+
+# -----------------------------------------------------------------------------------
+# looping actual value of 2 dimentional array
+print("\nlooping actual value of 2 dimentional array")
+
+var_array_5 = np.array([[1,2,3,4],[6,7,8,9]])
+
+for i in var_array_5:
+    for k in i:
+        print(k)
+
+
+# -----------------------------------------------------------------------------------
+# Iterating Arrays Using nditer()
+
+"""The function nditer() is a helping function that can be used from very basic to very advanced iterations. 
+It solves some basic issues which we face in iteration.
+
+Iterating on Each Scalar Element
+In basic for loops, iterating through each scalar of an array we need to use n for loops which can be difficult 
+to write for arrays with very high dimensionality."""
+
+# Iterate through the following 3-D array using nditer() 
+var_array_6 = np.array([[[1,2,3,4],[6,7,8,9]],[[10,11,12,13],[22,33,4,55]]]) # still 3D
+
+print("\nIterate through the following 3-D array using nditer() ")
+for i in np.nditer(var_array_6):
+    print(i)
+
+#------------------onother
+var_array_7 = np.array([[[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]],[[13,14,16],[4,5,6]]]])
+
+var_array_8 = np.array([[[[[1, 2, 3],[1, 2, 3],[1, 2, 3],[1, 2, 3],[1, 2, 3]]]]], ndmin=5)# you created array with 5 dimentions fully specified
+
+print("\nIterate through the following 5-D array using nditer() ")
+for i in np.nditer(var_array_8):
+    print(i)
+
+
+print()
+print(var_array_7.ndim)
+print(var_array_8.ndim)
+
+
+# -----------------------------------------------------------------------------------
+# Iterating Array With Different Data Types
+var_array_9 = np.array([[[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]],[[13,14,16],[4,5,6]]]], dtype='i8')
+
+for i in np.nditer(var_array_9, flags=['buffered'], op_dtypes=['i8']):
+  print(i)
+
+
+print()
+for i in np.nditer(var_array_9, flags=['buffered'], op_dtypes=['S']):
+  print(i)
+
+
+# -----------------------------------------------------------------------------------
+# terating With Different Step Size
+print()
+
+var_array_10 = np.array([[[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]],[[13,14,16],[4,5,6]]]])
+
+# with 5 dimentional array 
+for i in np.nditer(var_array_10[:,::2]):
+  print(i)
+
+#----------------------
+# another value skipp with 2 dimentional array
+var_array_11 = np.array([[1,2,3,4],[6,7,8,9]])
+print()
+
+for i in np.nditer(var_array_11[:,::2]):
+    print(i)
+
+
+# -----------------------------------------------------------------------------------
+# Enumerated Iteration Using ndenumerate()
