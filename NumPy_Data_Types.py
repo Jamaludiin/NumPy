@@ -104,3 +104,26 @@ print()
 var_array_12 = np.array([1.5,2.3,3.7,4.8,5.9,6.1,7.33,8,9],dtype='i') 
 print(var_array_12.dtype) # int32 bit, all float points are ignored, please take care, you might loose data
 print(var_array_12)
+
+
+
+print()
+# ----------------------------------------------------------------------------
+# Converting Data Type on Existing Arrays
+"""
+The best way to change the data type of an existing array, is to make a copy of the array with the astype() method.
+The astype() function creates a copy of the array, and allows you to specify the data type as a parameter.
+The data type can be specified using a string, like 'f' for float, 'i' for integer etc. or you can use the data type directly like float for float and int for integer.
+source to cite: w3schools.com
+"""
+
+var_array_13 = np.array([[12.3,44.5,6,7.7,5.4],[1.2,4.5,6.7,8.9,5.5]])
+
+var_array_13a = var_array_13.astype('i')
+# you can also do something like this
+var_array_13b = var_array_13.astype(int)
+var_array_13c = var_array_13.astype(bool)
+
+print(var_array_13a.dtype, var_array_13a)
+print(var_array_13b.dtype, var_array_13b)
+print(var_array_13c.dtype, var_array_13c)
