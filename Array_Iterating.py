@@ -213,3 +213,34 @@ for i in np.nditer(var_array_11[:,::2]):
 
 # -----------------------------------------------------------------------------------
 # Enumerated Iteration Using ndenumerate()
+# Enumeration means mentioning sequence number of somethings one by one.
+
+# 2D
+print()
+var_array_12 = np.array([[1,2,3,4],[6,7,8,9]])
+
+for idx, x in np.ndenumerate(var_array_12):
+  print(idx, x)
+
+
+# -----------------------------------
+# 3D
+print()
+var_array_13 = np.array([[[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]],[[13,14,16],[4,5,6]]]])
+for idx, x in np.ndenumerate(var_array_13):
+  print(idx, x)
+
+
+# -----------------------------------
+# 5D
+print()
+var_array_14 = np.array([[[[[1, 2, 3],[1, 2, 3],[1, 2, 3],[1, 2, 3],[1, 2, 3]]]]], ndmin=5)
+
+for idx, x in np.ndenumerate(var_array_14):
+  print(idx, x)
+
+
+# -------------------------------------------------------------------------------------
+
+# -----------------------------------
+print()
