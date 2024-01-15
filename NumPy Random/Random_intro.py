@@ -44,7 +44,7 @@ print(var_random_float)
 print("\nLooping the values")
 
 for i in var_random_float:
-    print(var_random_float)
+    print(var_random_float) # or call i for one by one
 
 
 # ---------------------------------
