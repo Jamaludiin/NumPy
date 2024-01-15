@@ -56,3 +56,9 @@ print(random.permutation(var_array_2)) # this is correct way becouse unlike the 
 # The permutation() method returns a re-arranged array (and leaves the original array un-changed).
 
 # --------------------------------------------------------------------
+
+
+# ------------------NOT RELATED ABOVE
+# checking python version
+import sys
+print(sys.version)
