@@ -58,6 +58,7 @@ print(random.permutation(var_array_2)) # this is correct way becouse unlike the 
 # --------------------------------------------------------------------
 
 
+
 # ------------------NOT RELATED ABOVE
 # checking python version
 import sys
