@@ -19,6 +19,12 @@ var_multinomial = random.multinomial(n=6, pvals=[1/6, 1/6, 1/6, 1/6, 1/6, 1/6])
 
 print(var_multinomial)
 
+"""
+Note: Multinomial samples will NOT produce a single value! They will produce one value for each pval.
+
+Note: As they are generalization of binomial distribution their visual representation and similarity of normal 
+      distribution is same as that of multiple binomial distributions.
+"""
 # -----------------------------------------------------------
 # looping the values and printing one by one
 print("\nLooping")
@@ -45,3 +51,4 @@ plt.show()
 
 sns.distplot(var_multinomial, hist=False)
 plt.show()
+
