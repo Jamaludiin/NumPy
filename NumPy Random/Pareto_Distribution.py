@@ -38,3 +38,6 @@ sns.distplot(var_pareto_dis)
 plt.show()
 
 # -----------------------------------------------------------------------------
+sns.distplot(random.pareto(a=2, size=1000), kde=False)
+
+plt.show()
