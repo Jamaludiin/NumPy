@@ -45,4 +45,35 @@ print(fuc_mult(list1,list2))
 print(fuc_div(list1,list2))
 
 # --------------------------------------------------------------------------
+# Check if a function is a ufunc:
 
+print(type(np.add))
+"""print(type(np.fuc_sub))
+print(type(np.fuc_mult))
+print(type(np.fuc_div))"""
+
+# --------------------------------------------------------------------------
+
+
+# --------------------------------------------------------------------------
+# Check if a Function is a ufunc
+"""Check the type of a function to check if it is a ufunc or not.
+A ufunc should return <class 'numpy.ufunc'>."""
+
+print("\nCheck type of a function")
+print(type(np.add))
+
+# --------------------------------------------------------------------------
+# If it is not a ufunc, it will return another type, like this built-in NumPy function for joining two or more arrays:
+print("\nCheck type If it is not a ufunc,")
+print(type(np.concatenate)) # Check the type of another function: concatenate():
+
+# If the function is not recognized at all, it will return an error:
+# print(type(np.fuc_div))
+# --------------------------------------------------------------------------
+# Use an if statement to check if the function is a ufunc or not:
+
+if type(np.add) == np.ufunc:
+  print('add is ufunc')
+else:
+  print('add is not ufunc')
