@@ -70,6 +70,7 @@ print(type(np.concatenate)) # Check the type of another function: concatenate():
 
 # If the function is not recognized at all, it will return an error:
 # print(type(np.fuc_div))
+
 # --------------------------------------------------------------------------
 # Use an if statement to check if the function is a ufunc or not:
 
