@@ -47,3 +47,4 @@ var_num_1 = np.arange(1,11)
 var_result = np.lcm.reduce(var_num_1)
 print("\nFinding LCM in Arrays")
 print(var_result)
+
